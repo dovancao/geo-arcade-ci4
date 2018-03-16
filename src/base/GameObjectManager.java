@@ -45,7 +45,7 @@ public class GameObjectManager {
     public Square checkCollision(BoxCollider other) {
         return (Square) this.vector
                 .stream()
-                .filter(gameObject -> gameObject.isAlive) //lay object con song
+                .filter(gameObject -> gameObject.isAlive)           //lay object con song
                 .filter(gameObject -> gameObject instanceof Square) //Lay con Square
                 .filter(gameObject -> {
                     BoxCollider boxCollider = ((Square) gameObject).boxCollider; //Lay BoxCollider
